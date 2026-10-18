@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var realFetch = window.fetch;
+          if (realFetch) {
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return realFetch; },
+              set: function(fn) { realFetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redeemer Celtic FC | Standalone Coach Backend & Operational Portal</title>
+    <meta name="description" content="Official Redeemer Celtic FC Coach Backend, 32-week FAI curriculum, interactive grass pitch tactics board, pitch inspection checklists, and concussion EAP protocols." />
+    <meta property="og:title" content="Redeemer Celtic FC | Standalone Coach Backend & Operational Portal" />
+    <meta property="og:description" content="Official Redeemer Celtic FC Coach Backend, 32-week FAI curriculum, interactive grass pitch tactics board, pitch inspection checklists, and concussion EAP protocols." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

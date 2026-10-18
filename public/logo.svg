@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="100%" height="100%">
+  <defs>
+    <!-- Gold Metallic Gradients -->
+    <linearGradient id="goldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="25%" stop-color="#eab308" />
+      <stop offset="50%" stop-color="#ca8a04" />
+      <stop offset="75%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#854d0e" />
+    </linearGradient>
+
+    <linearGradient id="goldInner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="40%" stop-color="#eab308" />
+      <stop offset="80%" stop-color="#a16207" />
+      <stop offset="100%" stop-color="#713f12" />
+    </linearGradient>
+
+    <!-- Shield Red Gradient -->
+    <linearGradient id="shieldRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="50%" stop-color="#dc2626" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+
+    <!-- Shield Blue Gradient -->
+    <linearGradient id="shieldBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+
+    <!-- Inner Parchment White -->
+    <radialGradient id="innerWhite" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="75%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </radialGradient>
+
+    <!-- Filter for 3D Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+
+    <filter id="ribbonShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="5" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Main Heraldic Shield Outer Frame (Gold Edge) -->
+    <!-- Points: Top peak (200, 20), curved flares out to (45, 65), concave down to (60, 250), sweeping down to base (200, 360) and mirrored -->
+    <path
+      d="M 200,22 
+         C 240,48 310,48 355,65 
+         C 340,140 330,220 315,260 
+         C 285,320 240,355 200,370 
+         C 160,355 115,320 85,260 
+         C 70,220 60,140 45,65 
+         C 90,48 160,48 200,22 Z"
+      fill="url(#goldOuter)"
+      stroke="#78350f"
+      stroke-width="3"
+    />
+
+    <!-- Shield Background: Split Top Red / Bottom Blue -->
+    <!-- Outer Shield Body slightly inset -->
+    <clipPath id="shieldClip">
+      <path
+        d="M 200,30 
+           C 238,54 305,54 345,70 
+           C 332,142 322,216 308,254 
+           C 280,312 238,345 200,360 
+           C 162,345 120,312 92,254 
+           C 78,216 68,142 55,70 
+           C 95,54 162,54 200,30 Z"
+      />
+    </clipPath>
+
+    <g clip-path="url(#shieldClip)">
+      <!-- Top Half Red -->
+      <rect x="30" y="20" width="340" height="175" fill="url(#shieldRed)" />
+      <!-- Bottom Half Blue -->
+      <rect x="30" y="195" width="340" height="180" fill="url(#shieldBlue)" />
+      <!-- Subtle divide line -->
+      <line x1="40" y1="195" x2="360" y2="195" stroke="#7f1d1d" stroke-width="1.5" opacity="0.4" />
+    </g>
+
+    <!-- Inner Shield (White / Cream Parchment with Gold / Red / Blue Frame) -->
+    <path
+      d="M 200,58 
+         C 232,74 278,75 310,88 
+         C 300,145 292,205 280,238 
+         C 255,282 225,308 200,322 
+         C 175,308 145,282 120,238 
+         C 108,205 100,145 90,88 
+         C 122,75 168,74 200,58 Z"
+      fill="url(#innerWhite)"
+      stroke="url(#goldInner)"
+      stroke-width="5"
+    />
+    
+    <!-- Fine inner accent stroke -->
+    <path
+      d="M 200,64 
+         C 230,78 274,79 304,91 
+         C 294,144 287,201 275,232 
+         C 252,274 223,299 200,312 
+         C 177,299 148,274 125,232 
+         C 113,201 106,144 96,91 
+         C 126,79 170,78 200,64 Z"
+      fill="none"
+      stroke="#334155"
+      stroke-width="1"
+      opacity="0.3"
+    />
+
+    <!-- Celtic Cross & Monogram 'R' (Black & Ornate Gothic Style) -->
+    <!-- Vertical Cross Beam -->
+    <path
+      d="M 196,78 
+         L 204,78 
+         L 204,82 L 208,85 L 208,89 L 204,92 L 204,260 
+         L 208,263 L 208,267 L 204,270 L 204,274 
+         L 196,274 
+         L 196,270 L 192,267 L 192,263 L 196,260 
+         L 196,92 L 192,89 L 192,85 L 196,82 Z"
+      fill="#09090b"
+    />
+
+    <!-- Horizontal Cross Beam with Fleur-de-lis / Celtic ends -->
+    <path
+      d="M 136,112 
+         L 142,106 L 146,112 L 254,112 L 258,106 L 264,112 
+         L 260,116 L 264,120 L 258,126 L 254,120 L 146,120 
+         L 142,126 L 136,120 L 140,116 Z"
+      fill="#09090b"
+    />
+
+    <!-- Ornate Celtic Capital Letter 'R' Interlaced with Cross -->
+    <!-- Left Stem of R -->
+    <path
+      d="M 172,100 
+         C 168,105 164,115 164,130 
+         C 164,165 174,185 172,210 
+         C 170,225 158,235 146,242 
+         C 152,246 166,246 176,236 
+         C 184,228 186,215 186,195 
+         C 186,175 180,150 180,125 
+         C 180,110 184,104 188,100 Z"
+      fill="#09090b"
+    />
+
+    <!-- Main Upper Bowl & Gothic Arch of R -->
+    <path
+      d="M 182,102 
+         C 192,96 215,92 232,105 
+         C 245,116 246,134 235,148 
+         C 224,160 205,166 186,166 
+         L 186,152 
+         C 200,152 216,148 222,138 
+         C 228,128 224,116 215,110 
+         C 204,104 192,108 184,114 Z"
+      fill="#09090b"
+    />
+
+    <!-- Sweeping Tail of R with Flourish -->
+    <path
+      d="M 204,158 
+         C 214,168 228,188 238,206 
+         C 246,220 252,232 250,240 
+         C 248,244 242,246 235,244 
+         C 230,240 228,232 225,224 
+         C 218,206 208,188 196,174 Z"
+      fill="#09090b"
+    />
+
+    <!-- Celtic Cross Halo / Ring Behind Intersection -->
+    <circle cx="200" cy="116" r="32" fill="none" stroke="#09090b" stroke-width="4.5" opacity="0.9" />
+    <circle cx="200" cy="116" r="26" fill="none" stroke="#09090b" stroke-width="2" opacity="0.6" />
+
+    <!-- Ornate Banner / Ribbon across bottom -->
+    <g filter="url(#ribbonShadow)">
+      <!-- Ribbon Fishtail Left Fold -->
+      <path
+        d="M 38,340 
+           L 70,305 L 105,320 L 78,358 Z"
+        fill="#18181b"
+        stroke="url(#goldOuter)"
+        stroke-width="2"
+      />
+      <polygon points="70,305 60,325 78,358" fill="#09090b" />
+
+      <!-- Ribbon Fishtail Right Fold -->
+      <path
+        d="M 362,340 
+           L 330,305 L 295,320 L 322,358 Z"
+        fill="#18181b"
+        stroke="url(#goldOuter)"
+        stroke-width="2"
+      />
+      <polygon points="330,305 340,325 322,358" fill="#09090b" />
+
+      <!-- Ribbon Center Plaque (Curved) -->
+      <path
+        d="M 55,310 
+           C 120,295 280,295 345,310 
+           C 335,340 310,345 200,352 
+           C 90,345 65,340 55,310 Z"
+        fill="#111827"
+        stroke="url(#goldOuter)"
+        stroke-width="4"
+      />
+
+      <!-- Inner gold accent line on ribbon -->
+      <path
+        d="M 64,314 
+           C 125,301 275,301 336,314 
+           C 328,336 305,340 200,347 
+           C 95,340 72,336 64,314 Z"
+        fill="none"
+        stroke="url(#goldInner)"
+        stroke-width="1.2"
+        opacity="0.8"
+      />
+
+      <!-- "REDEEMER" Text -->
+      <text
+        x="200"
+        y="333"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-weight="900"
+        font-size="25"
+        letter-spacing="5"
+        text-anchor="middle"
+        style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);"
+      >
+        REDEEMER
+      </text>
+    </g>
+
+    <!-- Bottom Shield Tip below Ribbon -->
+    <path
+      d="M 180,352 
+         L 200,375 
+         L 220,352 Z"
+      fill="url(#shieldBlue)"
+      stroke="url(#goldOuter)"
+      stroke-width="2.5"
+    />
+  </g>
+</svg>

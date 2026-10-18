@@ -1,0 +1,8 @@
+{
+  "name": "Remix Redeemer Celtic FC - FAI Coach Handbooks \u0026 Club Mark Portal",
+  "description": "Modular age-specific coach handbooks, grass pitch training drills, FAI Club Mark accreditation checklists, and grassroots operational resources for Redeemer Celtic FC in Dundalk.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
